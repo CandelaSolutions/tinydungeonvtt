@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://crl3xk2gb8r5m"]
+
+[ext_resource type="Shader" path="res://Visuals/Shaders/Sky.gdshader" id="1_okd8m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nagsr"]
+shader = ExtResource("1_okd8m")
+shader_parameter/skyColour = null
+
+[sub_resource type="Sky" id="Sky_n0hqy"]
+sky_material = SubResource("ShaderMaterial_nagsr")
+
+[sub_resource type="Environment" id="Environment_bqjj8"]
+background_mode = 2
+sky = SubResource("Sky_n0hqy")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[node name="MainMenuBackground" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.745441, 0.666571, 0, -0.666571, 0.745441, 0, 1.25162, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.882217, 0, 0.470843, 0.213113, 0.891703, -0.39931, -0.419852, 0.452621, 0.786676, 0, 0, -2.78416)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_bqjj8")

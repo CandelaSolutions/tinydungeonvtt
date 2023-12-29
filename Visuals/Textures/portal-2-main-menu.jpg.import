@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q4a6e5h78xgd"
-path="res://.godot/imported/logo_vertical_monochrome_dark.png-b8c5f7966a752041342529d63bd5eee7.ctex"
+uid="uid://davtj6mgn4opu"
+path="res://.godot/imported/portal-2-main-menu.jpg-38889ce513f4810180e024690a251bb0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Godot/logo_vertical_monochrome_dark.png"
-dest_files=["res://.godot/imported/logo_vertical_monochrome_dark.png-b8c5f7966a752041342529d63bd5eee7.ctex"]
+source_file="res://Visuals/Textures/portal-2-main-menu.jpg"
+dest_files=["res://.godot/imported/portal-2-main-menu.jpg-38889ce513f4810180e024690a251bb0.ctex"]
 
 [params]
 

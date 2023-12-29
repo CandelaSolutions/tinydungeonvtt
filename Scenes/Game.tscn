@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3linnl0ykllx"]
+
+[ext_resource type="Script" path="res://Scripts/GameData.gd" id="1_75yac"]
+[ext_resource type="PackedScene" uid="uid://ftkq2mt1m15c" path="res://Scenes/MainMenu.tscn" id="2_ys1y6"]
+[ext_resource type="PackedScene" uid="uid://crl3xk2gb8r5m" path="res://Scenes/MainMenuBackground.tscn" id="3_oj7qt"]
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_75yac")
+
+[node name="MainMenu" parent="." instance=ExtResource("2_ys1y6")]
+
+[node name="MainMenuBackground" parent="." instance=ExtResource("3_oj7qt")]
+
+[node name="CommandPrompt" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="PreviousCommands" type="VBoxContainer" parent="CommandPrompt"]
+layout_mode = 2
+alignment = 2
+
+[node name="CommandLine" type="LineEdit" parent="CommandPrompt"]
+layout_mode = 2
+placeholder_text = "> Commands Go Here"
+select_all_on_focus = true

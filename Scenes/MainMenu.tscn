@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://ftkq2mt1m15c"]
+
+[ext_resource type="Texture2D" uid="uid://davtj6mgn4opu" path="res://Visuals/Textures/portal-2-main-menu.jpg" id="1_3vvhm"]
+[ext_resource type="LabelSettings" uid="uid://dnb6wfpll6f3q" path="res://Visuals/LabelSettings/Title.tres" id="2_v0d0g"]
+[ext_resource type="LabelSettings" uid="uid://dqpui0ue688kd" path="res://Visuals/LabelSettings/h2.tres" id="3_eqyh3"]
+[ext_resource type="Texture2D" uid="uid://rlbcifbmbag0" path="res://icon.svg" id="3_rork6"]
+
+[sub_resource type="Gradient" id="Gradient_dwgo6"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j2hcy"]
+gradient = SubResource("Gradient_dwgo6")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3vvhm")
+expand_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.913725)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.45
+anchor_bottom = 1.0
+texture = SubResource("GradientTexture1D_j2hcy")
+
+[node name="Title & Tagline" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.45
+anchor_bottom = 0.4
+
+[node name="Title" type="Label" parent="Title & Tagline"]
+layout_mode = 2
+text = "Tiny Dungeon Virtual Table Top"
+label_settings = ExtResource("2_v0d0g")
+autowrap_mode = 3
+
+[node name="Label" type="Label" parent="Title & Tagline"]
+layout_mode = 2
+text = "A software by JDHinds and Candela Solutions Ltd."
+label_settings = ExtResource("3_eqyh3")
+autowrap_mode = 3
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.4
+anchor_right = 0.45
+anchor_bottom = 1.0
+
+[node name="Start Game" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Start Game"
+icon = ExtResource("3_rork6")
+alignment = 0
+expand_icon = true
+
+[node name="View Library" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "View Library"
+alignment = 0
+
+[node name="Options" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Options"
+alignment = 0
+
+[node name="Quit" type="Button" parent="Buttons"]
+layout_mode = 2
+text = "Quit"
+alignment = 0
