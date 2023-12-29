@@ -3,6 +3,6 @@
 ## To-Do:
 
 - [ ] Command Parser
-- - [ ] Dice Rolling
+  - [ ] Dice Rolling
 - [ ] Programatic Meshes
 - [ ] Resource Loading
