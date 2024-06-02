@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ftkq2mt1m15c"]
+[gd_scene load_steps=8 format=3 uid="uid://ftkq2mt1m15c"]
 
 [ext_resource type="Texture2D" uid="uid://davtj6mgn4opu" path="res://Visuals/Textures/portal-2-main-menu.jpg" id="1_3vvhm"]
 [ext_resource type="LabelSettings" uid="uid://dnb6wfpll6f3q" path="res://Visuals/LabelSettings/Title.tres" id="2_v0d0g"]
 [ext_resource type="LabelSettings" uid="uid://dqpui0ue688kd" path="res://Visuals/LabelSettings/h2.tres" id="3_eqyh3"]
 [ext_resource type="Texture2D" uid="uid://rlbcifbmbag0" path="res://icon.svg" id="3_rork6"]
+[ext_resource type="Script" path="res://Scripts/SystemManagement/Library.gd" id="5_xyiuy"]
 
 [sub_resource type="Gradient" id="Gradient_dwgo6"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
@@ -95,3 +96,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
 grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+editable = false
+script = ExtResource("5_xyiuy")

@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://fst4va0mjmmd"]
+
+[ext_resource type="FontFile" uid="uid://dtltei2f643mm" path="res://Visuals/Fonts/Hack-Regular.ttf" id="1_g1p0r"]
+
+[resource]
+default_font = ExtResource("1_g1p0r")

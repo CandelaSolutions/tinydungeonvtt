@@ -18,13 +18,11 @@ reflected_light_source = 2
 [node name="MainMenuBackground" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.426632, 0.319987, -0.845928, -1.70803e-08, 0.935321, 0.353801, 0.904425, 0.150943, -0.399038, -1.94819, 1.19793, 0.258321)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.745441, 0.666571, 0, -0.666571, 0.745441, 0, 1.25162, 0)
-
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(0.882217, 0, 0.470843, 0.213113, 0.891703, -0.39931, -0.419852, 0.452621, 0.786676, 0, 0, -2.78416)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bqjj8")
