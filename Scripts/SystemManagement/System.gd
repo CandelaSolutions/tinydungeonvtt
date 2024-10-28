@@ -1,7 +1,5 @@
+extends Resource
 class_name System
 
-var systemName
-
-var abilityScoreNames
-var abilityScoreAbbreviations
-
+@export var name: String
+@export var version: String

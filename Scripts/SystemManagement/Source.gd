@@ -1,9 +1,10 @@
+extends Resource
 class_name Source
 
-var sourceName
-var sourceSystem
-var author
-var canonicity
-
-var datePublished
-var pageCount
+@export var name: String
+@export var system: System
+## How canon is this in reference to the publisher
+@export var canonicity: String
+var datePublished: Time
+@export var pageCount: int
+@export var credits: Array[Credit]
