@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="System" load_steps=2 format=3 uid="uid://ciubtrxhedll"]
+
+[ext_resource type="Script" uid="uid://dvd7pmjy8qxb2" path="res://Scripts/SystemManagement/System.gd" id="1_tke44"]
+
+[resource]
+script = ExtResource("1_tke44")
+name = "Dungeons & Dragons"
+version = "5th Edition 2024 (SRD)"
+die = 20
+metadata/_custom_type_script = "uid://dvd7pmjy8qxb2"

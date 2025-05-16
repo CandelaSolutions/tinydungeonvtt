@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Source" load_steps=4 format=3 uid="uid://djm42dry2gabt"]
+
+[ext_resource type="Resource" uid="uid://dg3hniwywar2h" path="res://DLC/D&D 5E SRD/data/SRD.tres" id="1_1kjtx"]
+[ext_resource type="Script" uid="uid://b668fka8rqufx" path="res://Scripts/SystemManagement/Source.gd" id="1_2j3by"]
+[ext_resource type="Resource" uid="uid://ciubtrxhedll" path="res://DLC/D&D 5E 2024 SRD/data/System.tres" id="2_1kjtx"]
+
+[resource]
+script = ExtResource("1_2j3by")
+name = "D&D System Reference Document 5.2.1"
+system = ExtResource("2_1kjtx")
+canonicity = "Canon"
+publisher = "Wizards of the Coast"
+datePublished = "2025-05-01"
+ISBN = ""
+DriveThruRpgID = 0
+pageCount = 364
+previousVersion = ExtResource("1_1kjtx")
+metadata/_custom_type_script = "uid://b668fka8rqufx"

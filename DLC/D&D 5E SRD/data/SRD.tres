@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Source" load_steps=2 format=3 uid="uid://dg3hniwywar2h"]
+
+[ext_resource type="Script" uid="uid://b668fka8rqufx" path="res://Scripts/SystemManagement/Source.gd" id="1_k47jw"]
+
+[resource]
+script = ExtResource("1_k47jw")
+name = "D&D System Reference Document 5.1"
+canonicity = "Canon"
+publisher = "Wizards of the Coast"
+datePublished = "2023-01-27"
+ISBN = ""
+DriveThruRpgID = 0
+pageCount = 403
+metadata/_custom_type_script = "uid://b668fka8rqufx"

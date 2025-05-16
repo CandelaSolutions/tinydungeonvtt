@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://crl3xk2gb8r5m"]
 
-[ext_resource type="Shader" path="res://Visuals/Shaders/Sky.gdshader" id="1_okd8m"]
+[ext_resource type="Shader" uid="uid://cm2mc80omyd37" path="res://Visuals/Shaders/Sky.gdshader" id="1_okd8m"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nagsr"]
 shader = ExtResource("1_okd8m")
-shader_parameter/skyColour = null
+shader_parameter/skyColour = Color(0, 0, 0, 1)
 
 [sub_resource type="Sky" id="Sky_n0hqy"]
 sky_material = SubResource("ShaderMaterial_nagsr")

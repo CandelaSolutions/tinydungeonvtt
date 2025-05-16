@@ -12,14 +12,10 @@ config_version=5
 
 config/name="Tiny Dungeon VTT"
 run/main_scene="res://Scenes/Game.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-config/icon="res://Visuals/Textures/Logo/tinydungeon3.png"
 boot_splash/image="res://Visuals/Textures/Godot/logo_vertical_monochrome_dark.png"
-
-[display]
-
-window/size/mode=2
+config/icon="res://Visuals/Textures/Logo/tinydungeon3.png"
 
 [dotnet]
 
