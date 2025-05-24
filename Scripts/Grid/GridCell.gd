@@ -1,58 +1,46 @@
 extends Node3D
 class_name GridCell
 
-var gridtype: int
-var closeNeighbours: Array[GridCell] # Clockwise from 12
-var farNeighbours: Array[GridCell]
-
+var gridType: int
+var neighbours: Array = []
 var points: Array = []
 var borderMaterial = preload("res://Visuals/Materials/border.tres")
 
-func _init(origin: Vector3, type: int, flip: bool = false) -> void:
+func _init(origin: Vector3, type: int, flip: bool) -> void:
 	transform.origin = origin
-	var mesh_instance = MeshInstance3D.new()
-	var points
-	
-	# Set the mesh for the MeshInstance3D
+	gridType = type
 	if flip:
-		points = generate_points(type, 1, PI - PI/type)
+		points = generate_points(gridType, 0.5, PI - PI/gridType)
 	else:
-		points = generate_points(type, 1)
-	
-	mesh_instance.mesh = generate_cell_mesh(points)
-	mesh_instance.scale = Vector3(0.5, 0.5, 0.5)
-	
-	# Add the MeshInstance3D as a child of the current Node3D
-	add_child(mesh_instance)
-	
-	var border_mesh_instance_0 = MeshInstance3D.new()
-	border_mesh_instance_0.mesh = generate_border_mesh(points[0], points[1], 4, 0.05, PI/2)
-	border_mesh_instance_0.material_override = borderMaterial
-	add_child(border_mesh_instance_0)
-	var border_mesh_instance_1 = MeshInstance3D.new()
-	border_mesh_instance_1.mesh = generate_border_mesh(points[1], points[2], 4, 0.05, PI/2)
-	border_mesh_instance_1.material_override = borderMaterial
-	add_child(border_mesh_instance_1)
-	var border_mesh_instance_2 = MeshInstance3D.new()
-	border_mesh_instance_2.mesh = generate_border_mesh(points[2], points[0], 4, 0.05, PI/2)
-	border_mesh_instance_2.material_override = borderMaterial
-	add_child(border_mesh_instance_2)
+		points = generate_points(gridType, 0.5)
+	match gridType:
+		3:
+			# N(close/farCorner), NE(far), E(close), EE(far), ESE(farCorner), SE(far), S(farCorner/close), SW(far), WSW(farCorner), WW(far), W(close), NW(far)
+			neighbours.resize(12)
+		4:
+			# N(close), NE(far), E(close), SE(far), S(close), SW(far), W(close), NW(far)
+			neighbours.resize(8)
+		6:
+			# N(far), NNE(close), NE(far), E(close), SE(far), SSE(close), S(far), SSW(close), SW(far), W(close), NW(far), NNW(close)
+			neighbours.resize(12)
 
 # --------------------------------- Functions ---------------------------------
 
-func generate_points(sides: int, radius: float = 1, rotation: float = PI/sides) -> Array:
+# Generate the array of Vector3s that hold the corner positions (Vital for everthing else!!!!)
+func generate_points(sides: int, radius: float = 0.5, rotation: float = PI/sides) -> Array:
 	var points = []
-	radius = radius / cos(PI / sides)  # Calculate the outer radius
+	radius = radius / cos(PI / sides)  # Calculate the inner radius (should be 1m from cell centre -> through flat side -> to cell centre)
 	
 	for i in range(sides):
 		var angle = i * 2 * PI / sides
 		var x = radius * cos(angle)
 		var y = radius * sin(angle)
 		points.append(Vector3(x, 0, y).rotated(Vector3(0, 1, 0), rotation))
-	
 	return points
 
-func generate_cell_mesh(points: Array) -> Mesh:
+# Generates the Cell Mesh
+func generate_cell(material: Material = null) -> void:
+	var mesh_instance = MeshInstance3D.new()
 	var vertices = PackedVector3Array()
 	var indices = PackedInt32Array()
 	for i in range(points.size()):
@@ -62,18 +50,19 @@ func generate_cell_mesh(points: Array) -> Mesh:
 			indices.append(i-1)
 			indices.append(i)
 
-	# Initialize the ArrayMesh.
 	var arr_mesh = ArrayMesh.new()
 	var arrays = []
 	arrays.resize(Mesh.ARRAY_MAX)
 	arrays[Mesh.ARRAY_VERTEX] = vertices
 	arrays[Mesh.ARRAY_INDEX] = indices
-
-	# Create the Mesh.
 	arr_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
-	return arr_mesh
+	mesh_instance.mesh = arr_mesh
+	if material:
+		mesh_instance.material_override = material
+	add_child(mesh_instance)
 
-func generate_border_mesh(point1: Vector3, point2: Vector3, sides: int, radius: float, rotation: float = 0) -> Mesh:
+# Generates the Border Mesh for 1 side, between 2 points
+func generate_border(point1: Vector3, point2: Vector3, sides: int, radius: float, rotation: float) -> void:
 	var vertices = PackedVector3Array()
 	var indices = PackedInt32Array()
 	var normals = PackedVector3Array()
@@ -109,7 +98,6 @@ func generate_border_mesh(point1: Vector3, point2: Vector3, sides: int, radius: 
 	indices.append(0)
 	indices.append(2*points1.size()-2)
 
-	# Initialize the ArrayMesh.
 	var arr_mesh = ArrayMesh.new()
 	var arrays = []
 	arrays.resize(Mesh.ARRAY_MAX)
@@ -117,4 +105,26 @@ func generate_border_mesh(point1: Vector3, point2: Vector3, sides: int, radius: 
 	arrays[Mesh.ARRAY_INDEX] = indices
 	arrays[Mesh.ARRAY_NORMAL] = normals
 	arr_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
-	return arr_mesh
+
+	var border_mesh_instance = MeshInstance3D.new()
+	border_mesh_instance.mesh = arr_mesh
+	border_mesh_instance.material_override = borderMaterial
+	add_child(border_mesh_instance)
+
+# Wrapper for the generate_border function to automatically generate a border based on if a neighbour doesn't already exists
+# (Should be called immediately neighbours are assigned -> relies on empty elements i.e. future neighbours are unassinged so generate those sides)
+func generate_borders(sides: int = 6, radius: float = 0.05, rotation: float = PI/2),  -> void:
+	closeNeighbours = arr.filter(func(element): return element.distance != 'farCorner' || element.distance != 'far')
+	for i in range(gridType):
+		if closeNeighbours[i] != null:
+			pass
+		var j: int
+		if i+1 == gridType:
+			j = 0
+		else:
+			j = i+1
+		generate_border(points[i], points[j], sides, radius, rotation)
+
+func assign_neighbour(neighbour: GridCell, direction: int) -> void:
+	neighbours[i] = neighbour
+	neighbours[i].neighbours[i-6] = this
