@@ -2,27 +2,19 @@ extends Node3D
 class_name GridCell
 
 var gridType: int
-var neighbours: Array = []
+var neighbours: Array[Array] = []
+enum neighbourType {Side, Corner, CornerAlt}
 var points: Array = []
 var borderMaterial = preload("res://Visuals/Materials/border.tres")
 
-func _init(origin: Vector3, type: int, flip: bool) -> void:
+func _init(origin: Vector3, type: int, flip: bool = false) -> void:
 	transform.origin = origin
 	gridType = type
 	if flip:
-		points = generate_points(gridType, 0.5, PI - PI/gridType)
+		points = generate_points(gridType, 0.4, PI - PI/gridType)
 	else:
-		points = generate_points(gridType, 0.5)
-	match gridType:
-		3:
-			# N(close/farCorner), NE(far), E(close), EE(far), ESE(farCorner), SE(far), S(farCorner/close), SW(far), WSW(farCorner), WW(far), W(close), NW(far)
-			neighbours.resize(12)
-		4:
-			# N(close), NE(far), E(close), SE(far), S(close), SW(far), W(close), NW(far)
-			neighbours.resize(8)
-		6:
-			# N(far), NNE(close), NE(far), E(close), SE(far), SSE(close), S(far), SSW(close), SW(far), W(close), NW(far), NNW(close)
-			neighbours.resize(12)
+		points = generate_points(gridType, 0.4)
+	generate_empty_neighbours_list(flip)
 
 # --------------------------------- Functions ---------------------------------
 
@@ -71,11 +63,11 @@ func generate_border(point1: Vector3, point2: Vector3, sides: int, radius: float
 	var points2 = []
 	for i in range(sides):
 		var angle = i * 2 * PI / sides
-		var x = radius * cos(angle) * 1 # TODO: Thicken proportential to the bending
+		var x = radius * cos(angle) # TODO: Thicken proportential to the bending
 		var y = radius * sin(angle)
 		var point = Vector3(x, y, 0).rotated(Vector3(0,0,1), rotation) # rotating to user's preference
-		var a = point.rotated(Vector3(0,1,0), -atan2(point1.z - y, point1.x - x)) + point1/2
-		var b = point.rotated(Vector3(0,1,0), -atan2(point2.z - y, point2.x - x)) + point2/2
+		var a = point.rotated(Vector3(0,1,0), -atan2(point1.z - y, point1.x - x)) + point1
+		var b = point.rotated(Vector3(0,1,0), -atan2(point2.z - y, point2.x - x)) + point2
 		points1.append(a)
 		points2.append(b)
 		normals.append(point.normalized())
@@ -113,18 +105,66 @@ func generate_border(point1: Vector3, point2: Vector3, sides: int, radius: float
 
 # Wrapper for the generate_border function to automatically generate a border based on if a neighbour doesn't already exists
 # (Should be called immediately neighbours are assigned -> relies on empty elements i.e. future neighbours are unassinged so generate those sides)
-func generate_borders(sides: int = 6, radius: float = 0.05, rotation: float = PI/2),  -> void:
-	closeNeighbours = arr.filter(func(element): return element.distance != 'farCorner' || element.distance != 'far')
+func generate_borders(sides: int = 6, radius: float = 0.05, rotation: float = PI/2)  -> void:
+	var closeNeighbours = neighbours.filter(func(element): return element[0] == neighbourType.Side)
 	for i in range(gridType):
-		if closeNeighbours[i] != null:
-			pass
-		var j: int
-		if i+1 == gridType:
-			j = 0
-		else:
-			j = i+1
-		generate_border(points[i], points[j], sides, radius, rotation)
+		if closeNeighbours[i].size() == 1:
+			var j: int
+			if i+1 == gridType:
+				j = 0
+			else:
+				j = i+1
+			generate_border(points[i], points[j], sides, radius, rotation)
+		
+func generate_empty_neighbours_list(flip : bool):
+	match gridType:
+		3:
+			neighbours.resize(12)
+			neighbours[0].append(neighbourType.CornerAlt)
+			neighbours[2].append(neighbourType.CornerAlt)
+			neighbours[4].append(neighbourType.CornerAlt)
+			neighbours[6].append(neighbourType.CornerAlt)
+			neighbours[8].append(neighbourType.CornerAlt)
+			neighbours[10].append(neighbourType.CornerAlt)
+			if flip:
+				neighbours[1].append(neighbourType.Side)
+				neighbours[3].append(neighbourType.Corner)
+				neighbours[5].append(neighbourType.Side)
+				neighbours[7].append(neighbourType.Corner)
+				neighbours[9].append(neighbourType.Side)
+				neighbours[11].append(neighbourType.Corner)
+			else:
+				neighbours[1].append(neighbourType.Corner)
+				neighbours[3].append(neighbourType.Side)
+				neighbours[5].append(neighbourType.Corner)
+				neighbours[7].append(neighbourType.Side)
+				neighbours[9].append(neighbourType.Corner)
+				neighbours[11].append(neighbourType.Side)
+		4:
+			neighbours.resize(8)
+			neighbours[0].append(neighbourType.Side)
+			neighbours[1].append(neighbourType.Corner)
+			neighbours[2].append(neighbourType.Side)
+			neighbours[3].append(neighbourType.Corner)
+			neighbours[4].append(neighbourType.Side)
+			neighbours[5].append(neighbourType.Corner)
+			neighbours[6].append(neighbourType.Side)
+			neighbours[7].append(neighbourType.Corner)
+		6:
+			neighbours.resize(12)
+			neighbours[0].append(neighbourType.Side)
+			neighbours[1].append(neighbourType.Corner)
+			neighbours[2].append(neighbourType.Side)
+			neighbours[3].append(neighbourType.Corner)
+			neighbours[4].append(neighbourType.Side)
+			neighbours[5].append(neighbourType.Corner)
+			neighbours[6].append(neighbourType.Side)
+			neighbours[7].append(neighbourType.Corner)
+			neighbours[8].append(neighbourType.Side)
+			neighbours[9].append(neighbourType.Corner)
+			neighbours[10].append(neighbourType.Side)
+			neighbours[11].append(neighbourType.Corner)
 
-func assign_neighbour(neighbour: GridCell, direction: int) -> void:
-	neighbours[i] = neighbour
-	neighbours[i].neighbours[i-6] = this
+func assign_neighbour(direction: int, neighbour: GridCell, halfStepPosition: GridCell = null) -> void:
+	neighbours[direction].append(neighbour)
+	neighbours[direction].append(halfStepPosition)

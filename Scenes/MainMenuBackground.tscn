@@ -18,7 +18,7 @@ reflected_light_source = 2
 [node name="MainMenuBackground" type="Node3D"]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.427358, 0.540303, -0.724872, 0, 0.801776, 0.597625, 0.904082, 0.2554, -0.342645, -2.373, 1.603, -0.247)
+transform = Transform3D(-0.923879, 0.277589, -0.263422, 0, 0.688355, 0.725375, 0.382683, 0.670159, -0.635957, 1.802, 2.598, -1.84)
 current = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
