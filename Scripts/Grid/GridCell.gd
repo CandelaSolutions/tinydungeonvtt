@@ -165,6 +165,17 @@ func generate_empty_neighbours_list(flip : bool):
 			neighbours[10].append(neighbourType.Side)
 			neighbours[11].append(neighbourType.Corner)
 
-func assign_neighbour(direction: int, neighbour: GridCell, halfStepPosition: GridCell = null) -> void:
+func assign_neighbour(direction: int, neighbour: GridCell, halfStepDirection: int = -1, negativeHalfStepDirection: int = -1, calculateOpposite: bool = true) -> void:
 	neighbours[direction].append(neighbour)
-	neighbours[direction].append(halfStepPosition)
+	neighbours[direction].append(halfStepDirection)
+	
+	if !calculateOpposite:
+		return
+	
+	var oppositeDirection = 0
+	if direction - len(neighbours)/2 >= 0:
+		oppositeDirection = direction - len(neighbours)/2
+	else:
+		oppositeDirection = direction + len(neighbours)/2
+	
+	neighbour.assign_neighbour(oppositeDirection, self, negativeHalfStepDirection, false)
