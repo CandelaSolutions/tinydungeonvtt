@@ -1,19 +1,5 @@
 # System Reference Document
 
-# Legal Information
-
-The System Reference Document 5.1 is provided to you free of charge under the terms of the Creative Commons Attribution 4.0 International License (“CC-BY-4.0”). You are free to use this content in any manner permitted by that license as long as you include the following attribution statement in your own work:
-
-This work includes material taken from the System Reference Document 5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at https://dnd.wizards.com/resources/systems-reference-document. The SRD 5.1 is licensed under the Creative Commons Attribution 4.0 International License available at https://creativecommons.org/licenses/by/4.0/legalcode.
-
-Please do not include any other attribution regarding Wizards other than that provided above. You may, however, include a statement on your work that it is “compatible with fifth edition” or “5E compatible.”
-
-Section 5 of CC-BY-4.0 includes a Disclaimer of Warranties and Limitation of Liability that limits our liability to you.
-
-```
-If you note any errors in this document, please let us know by emailing askdnd@wizards.com.
-```
-
 # Races
 
 ### Racial Traits
@@ -192,18 +178,18 @@ Your draconic heritage manifests in a variety of traits you share with other dra
 
 ##### Draconic Ancestry
 
-| Dragon | Damage Type | Breath Weapon |
-|:-------|:------------|:--------------|
-| Black | Acid | 5 by 30 ft. line (Dex. save) |
-| Blue | Lightning | 5 by 30 ft. line (Dex. save) |
-| Brass | Fire | 5 by 30 ft. line (Dex. save) |
-| Bronze | Lightning | 5 by 30 ft. line (Dex. save) |
-| Copper | Acid | 5 by 30 ft. line (Dex. save) |
-| Gold | Fire | 15 ft. cone (Dex. save) |
-| Green | Poison | 15 ft. cone (Con. save) |
-| Red | Fire | 15 ft. cone (Dex. save) |
-| Silver | Cold | 15 ft. cone (Con. save) |
-| White | Cold | 15 ft. cone (Con. save) |
+| Dragon | Damage Type | Breath Weapon                |
+| :----- | :---------- | :--------------------------- |
+| Black  | Acid        | 5 by 30 ft. line (Dex. save) |
+| Blue   | Lightning   | 5 by 30 ft. line (Dex. save) |
+| Brass  | Fire        | 5 by 30 ft. line (Dex. save) |
+| Bronze | Lightning   | 5 by 30 ft. line (Dex. save) |
+| Copper | Acid        | 5 by 30 ft. line (Dex. save) |
+| Gold   | Fire        | 15 ft. cone (Dex. save)      |
+| Green  | Poison      | 15 ft. cone (Con. save)      |
+| Red    | Fire        | 15 ft. cone (Dex. save)      |
+| Silver | Cold        | 15 ft. cone (Con. save)      |
+| White  | Cold        | 15 ft. cone (Con. save)      |
 
 ***Draconic Ancestry.*** You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type, as shown in the table.
 
@@ -359,28 +345,28 @@ to the equipment granted by your background:
 
 ##### The Barbarian
 
-| Level | Proficiency Bonus | Features | Rages | Rage Damage |
-|:-----:|:-----------------:|:---------|:-----:|:-----------:|
-| 1st | +2 | Rage, Unarmored Defense | 2 | +2 |
-| 2nd | +2 | Reckless Attack, Danger Sense | 2 | +2 |
-| 3rd | +2 | Primal Path | 3 | +2 |
-| 4th | +2 | Ability Score Improvement | 3 | +2 |
-| 5th | +3 | Extra Attack, Fast Movement | 3 | +2 |
-| 6th | +3 | Path feature | 4 | +2 |
-| 7th | +3 | Feral Instinct | 4 | +2 |
-| 8th | +3 | Ability Score Improvement | 4 | +2 |
-| 9th | +4 | Brutal Critical (1 die) | 4 | +3 |
-| 10th | +4 | Path feature | 4 | +3 |
-| 11th | +4 | Relentless Rage | 4 | +3 |
-| 12th | +4 | Ability Score Improvement | 5 | +3 |
-| 13th | +5 | Brutal Critical (2 dice) | 5 | +3 |
-| 14th | +5 | Path feature | 5 | +3 |
-| 15th | +5 | Persistent Rage | 5 | +3 |
-| 16th | +5 | Ability Score Improvement | 5 | +4 |
-| 17th | +6 | Brutal Critical (3 dice) | 6 | +4 |
-| 18th | +6 | Indomitable Might | 6 | +4 |
-| 19th | +6 | Ability Score Improvement | 6 | +4 |
-| 20th | +6 | Primal Champion | Unlimited | +4 |
+| Level | Proficiency Bonus | Features                      |   Rages   | Rage Damage |
+| :---: | :---------------: | :---------------------------- | :-------: | :---------: |
+|  1st  |        +2         | Rage, Unarmored Defense       |     2     |     +2      |
+|  2nd  |        +2         | Reckless Attack, Danger Sense |     2     |     +2      |
+|  3rd  |        +2         | Primal Path                   |     3     |     +2      |
+|  4th  |        +2         | Ability Score Improvement     |     3     |     +2      |
+|  5th  |        +3         | Extra Attack, Fast Movement   |     3     |     +2      |
+|  6th  |        +3         | Path feature                  |     4     |     +2      |
+|  7th  |        +3         | Feral Instinct                |     4     |     +2      |
+|  8th  |        +3         | Ability Score Improvement     |     4     |     +2      |
+|  9th  |        +4         | Brutal Critical (1 die)       |     4     |     +3      |
+| 10th  |        +4         | Path feature                  |     4     |     +3      |
+| 11th  |        +4         | Relentless Rage               |     4     |     +3      |
+| 12th  |        +4         | Ability Score Improvement     |     5     |     +3      |
+| 13th  |        +5         | Brutal Critical (2 dice)      |     5     |     +3      |
+| 14th  |        +5         | Path feature                  |     5     |     +3      |
+| 15th  |        +5         | Persistent Rage               |     5     |     +3      |
+| 16th  |        +5         | Ability Score Improvement     |     5     |     +4      |
+| 17th  |        +6         | Brutal Critical (3 dice)      |     6     |     +4      |
+| 18th  |        +6         | Indomitable Might             |     6     |     +4      |
+| 19th  |        +6         | Ability Score Improvement     |     6     |     +4      |
+| 20th  |        +6         | Primal Champion               | Unlimited |     +4      |
 
 ### Rage
 In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.
@@ -505,28 +491,28 @@ You start with the following equipment, in addition to the equipment granted by 
 
 ##### The Bard
 
-| Level | Proficiency Bonus | Features | Cantrips Known | Spells Known | Spell Slots per Spell Level : 1st | 2nd | 3rd | 4th | 5th | 6th | 7th | 8th | 9th |
-|:-----:|:-----------------:|:---------|:--------------:|:------------:|:---------------------------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1st | +2 | Spellcasting, Bardic Inspiration (d6) | 2 | 4 | 2 | - | - | - | - | - | - | - | - |
-| 2nd | +2 | Jack of All Trades, Song of Rest (d6) | 2 | 5 | 3 | - | - | - | - | - | - | - | - |
-| 3rd | +2 | Bard College, Expertise | 2 | 6 | 4 | 2 | - | - | - | - | - | - | - |
-| 4th | +2 | Ability Score Improvement | 3 | 7 | 4 | 3 | - | - | - | - | - | - | - |
-| 5th | +3 | Bardic Inspiration (d8), Font of Inspiration | 3 | 8 | 4 | 3 | 2 | - | - | - | - | - | - |
-| 6th | +3 | Countercharm, Bard College feature | 3 | 9 | 4 | 3 | 3 | - | - | - | - | - | - |
-| 7th | +3 | - | 3 | 10 | 4 | 3 | 3 | 1 | - | - | - | - | - | 
-| 8th | +3 | Ability Score Improvement | 3 | 11 | 4 | 3 | 3 | 2 | - | - | - | - | - |
-| 9th | +4 | Song of Rest (d8) | 3 | 12 | 4 | 3 | 3 | 3 | 1 | - | - | - | - |
-| 10th | +4 | Bardic Inspiration (d10), Expertise, Magical Secrets | 4 | 14 | 4 | 3 | 3 | 3 | 2 | - | - | - | - |
-| 11th | +4 | - | 4 | 15 | 4 | 3 | 3 | 3 | 2 | 1 | - | - | - |
-| 12th | +4 | Ability Score Improvement | 4 | 15 | 4 | 3 | 3 | 3 | 2 | 1 | - | - | - |
-| 13th | +5 | Song of Rest (d10) | 4 | 16 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | - | - |
-| 14th | +5 | Magical Secrets, Bard College feature | 4 | 18 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | - | - |
-| 15th | +5 | Bardic Inspiration (d12) | 4 | 19 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | - |
-| 16th | +5 | Ability Score Improvement | 4 | 19 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | - |
-| 17th | +6 | Song of Rest (d12) | 4 | 20 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |
-| 18th | +6 | Magical Secrets | 4 | 22 | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |
-| 19th | +6 | Ability Score Improvement | 4 | 22 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |
-| 20th | +6 | Superior Inspiration | 4 | 22 | 4 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 1 |
+| Level | Proficiency Bonus | Features                                             | Cantrips Known | Spells Known | Spell Slots per Spell Level : 1st |  2nd  |  3rd  |  4th  |  5th  |  6th  |  7th  |  8th  |  9th  |
+| :---: | :---------------: | :--------------------------------------------------- | :------------: | :----------: | :-------------------------------: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|  1st  |        +2         | Spellcasting, Bardic Inspiration (d6)                |       2        |      4       |                 2                 |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  2nd  |        +2         | Jack of All Trades, Song of Rest (d6)                |       2        |      5       |                 3                 |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  3rd  |        +2         | Bard College, Expertise                              |       2        |      6       |                 4                 |   2   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  4th  |        +2         | Ability Score Improvement                            |       3        |      7       |                 4                 |   3   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  5th  |        +3         | Bardic Inspiration (d8), Font of Inspiration         |       3        |      8       |                 4                 |   3   |   2   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  6th  |        +3         | Countercharm, Bard College feature                   |       3        |      9       |                 4                 |   3   |   3   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  7th  |        +3         | -                                                    |       3        |      10      |                 4                 |   3   |   3   |   1   |   -   |   -   |   -   |   -   |   -   |
+|  8th  |        +3         | Ability Score Improvement                            |       3        |      11      |                 4                 |   3   |   3   |   2   |   -   |   -   |   -   |   -   |   -   |
+|  9th  |        +4         | Song of Rest (d8)                                    |       3        |      12      |                 4                 |   3   |   3   |   3   |   1   |   -   |   -   |   -   |   -   |
+| 10th  |        +4         | Bardic Inspiration (d10), Expertise, Magical Secrets |       4        |      14      |                 4                 |   3   |   3   |   3   |   2   |   -   |   -   |   -   |   -   |
+| 11th  |        +4         | -                                                    |       4        |      15      |                 4                 |   3   |   3   |   3   |   2   |   1   |   -   |   -   |   -   |
+| 12th  |        +4         | Ability Score Improvement                            |       4        |      15      |                 4                 |   3   |   3   |   3   |   2   |   1   |   -   |   -   |   -   |
+| 13th  |        +5         | Song of Rest (d10)                                   |       4        |      16      |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   -   |   -   |
+| 14th  |        +5         | Magical Secrets, Bard College feature                |       4        |      18      |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   -   |   -   |
+| 15th  |        +5         | Bardic Inspiration (d12)                             |       4        |      19      |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   1   |   -   |
+| 16th  |        +5         | Ability Score Improvement                            |       4        |      19      |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   1   |   -   |
+| 17th  |        +6         | Song of Rest (d12)                                   |       4        |      20      |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   1   |   1   |
+| 18th  |        +6         | Magical Secrets                                      |       4        |      22      |                 4                 |   3   |   3   |   3   |   3   |   1   |   1   |   1   |   1   |
+| 19th  |        +6         | Ability Score Improvement                            |       4        |      22      |                 4                 |   3   |   3   |   3   |   3   |   2   |   1   |   1   |   1   |
+| 20th  |        +6         | Superior Inspiration                                 |       4        |      22      |                 4                 |   3   |   3   |   3   |   3   |   2   |   2   |   1   |   1   |
 
 ### Spellcasting
 
@@ -673,26 +659,26 @@ You start with the following equipment, in addition to the equipment granted by 
 
 ##### The Cleric
 
-| Level | Proficiency Bonus | Features | Cantrips Known | Spell Slots per Spell Level : 1st | 2nd | 3rd | 4th | 5th | 6th | 7th | 8th | 9th |
-|:-----:|:-----------------:|:---------|:--------------:|:---------------------------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1st | +2 | Spellcasting, Divine Domain | 3 | 2 | - | - | - | - | - | - | - | - |
-| 2nd | +2 | Channel Divinity (1/rest), Divine Domain feature | 3 | 3 | - | - | - | - | - | - | - | - |
-| 3rd | +2 | - | 3 | 4 | 2 | - | - | - | - | - | - | - |
-| 4th | +2 | Ability Score Improvement | 4 | 4 | 3 | - | - | - | - | - | - | - |
-| 5th | +3 | Destroy Undead (CR 1/2) | 4 | 4 | 3 | 2 | - | - | - | - | - | - |
-| 6th | +3 | Channel Divinity (2/rest), Divine Domain feature | 4 | 4 | 3 | 3 | - | - | - | - | - | - |
-| 7th | +3 | - | 4 | 4 | 3 | 3 | 1 | - | - | - | - | - |
-| 8th | +3 | Ability Score Improvement, Destroy Undead (CR 1), Divine Domain feature | 4 | 4 | 3 | 3 | 2 | - | - | - | - | - |
-| 9th | +4 | - | 4 | 4 | 3 | 3 | 3 | 1 | - | - | - | - |
-| 10th | +4 | Divine Intervention | 5 | 4 | 3 | 3 | 3 | 2 | - | - | - | - |
-| 11th | +4 | Destroy Undead (CR 2) | 5 | 4 | 3 | 3 | 3 | 2 | 1 | - | - | - |
-| 12th | +4 | Ability Score Improvement | 5 | 4 | 3 | 3 | 3 | 2 | 1 | - | - | - |
-| 13th | +5 | - | 5 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | - | - |
-| 14th | +5 | Destroy Undead (CR 3) | 5 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | - | - |
-| 15th | +5 | - | 5 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | - |
-| 16th | +5 | Ability Score Improvement | 5 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | - |
-| 17th | +6 | Destroy Undead (CR 4), Divine Domain feature | 5 | 4 | 3 | 3 | 3 | 2 | 1 | 1 | 1 | 1 |
-| 18th | +6 | Channel Divinity (3/rest) | 5 | 4 | 3 | 3 | 3 | 3 | 1 | 1 | 1 | 1 |
-| 19th | +6 | Ability Score Improvement | 5 | 4 | 3 | 3 | 3 | 3 | 2 | 1 | 1 | 1 |
-| 20th | +6 | Divine Intervention improvement | 5 | 4 | 3 | 3 | 3 | 3 | 2 | 2 | 1 | 1 |
+| Level | Proficiency Bonus | Features                                                                | Cantrips Known | Spell Slots per Spell Level : 1st |  2nd  |  3rd  |  4th  |  5th  |  6th  |  7th  |  8th  |  9th  |
+| :---: | :---------------: | :---------------------------------------------------------------------- | :------------: | :-------------------------------: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|  1st  |        +2         | Spellcasting, Divine Domain                                             |       3        |                 2                 |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  2nd  |        +2         | Channel Divinity (1/rest), Divine Domain feature                        |       3        |                 3                 |   -   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  3rd  |        +2         | -                                                                       |       3        |                 4                 |   2   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  4th  |        +2         | Ability Score Improvement                                               |       4        |                 4                 |   3   |   -   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  5th  |        +3         | Destroy Undead (CR 1/2)                                                 |       4        |                 4                 |   3   |   2   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  6th  |        +3         | Channel Divinity (2/rest), Divine Domain feature                        |       4        |                 4                 |   3   |   3   |   -   |   -   |   -   |   -   |   -   |   -   |
+|  7th  |        +3         | -                                                                       |       4        |                 4                 |   3   |   3   |   1   |   -   |   -   |   -   |   -   |   -   |
+|  8th  |        +3         | Ability Score Improvement, Destroy Undead (CR 1), Divine Domain feature |       4        |                 4                 |   3   |   3   |   2   |   -   |   -   |   -   |   -   |   -   |
+|  9th  |        +4         | -                                                                       |       4        |                 4                 |   3   |   3   |   3   |   1   |   -   |   -   |   -   |   -   |
+| 10th  |        +4         | Divine Intervention                                                     |       5        |                 4                 |   3   |   3   |   3   |   2   |   -   |   -   |   -   |   -   |
+| 11th  |        +4         | Destroy Undead (CR 2)                                                   |       5        |                 4                 |   3   |   3   |   3   |   2   |   1   |   -   |   -   |   -   |
+| 12th  |        +4         | Ability Score Improvement                                               |       5        |                 4                 |   3   |   3   |   3   |   2   |   1   |   -   |   -   |   -   |
+| 13th  |        +5         | -                                                                       |       5        |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   -   |   -   |
+| 14th  |        +5         | Destroy Undead (CR 3)                                                   |       5        |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   -   |   -   |
+| 15th  |        +5         | -                                                                       |       5        |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   1   |   -   |
+| 16th  |        +5         | Ability Score Improvement                                               |       5        |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   1   |   -   |
+| 17th  |        +6         | Destroy Undead (CR 4), Divine Domain feature                            |       5        |                 4                 |   3   |   3   |   3   |   2   |   1   |   1   |   1   |   1   |
+| 18th  |        +6         | Channel Divinity (3/rest)                                               |       5        |                 4                 |   3   |   3   |   3   |   3   |   1   |   1   |   1   |   1   |
+| 19th  |        +6         | Ability Score Improvement                                               |       5        |                 4                 |   3   |   3   |   3   |   3   |   2   |   1   |   1   |   1   |
+| 20th  |        +6         | Divine Intervention improvement                                         |       5        |                 4                 |   3   |   3   |   3   |   3   |   2   |   2   |   1   |   1   |
 
