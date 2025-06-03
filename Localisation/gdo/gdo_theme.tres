@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bd3bqomcx8kjs"]
+
+[ext_resource type="FontFile" uid="uid://c1k8mk1jee4ac" path="res://Localisation/shk/BotW_Sheikah.ttf" id="1_e4vde"]
+[ext_resource type="FontFile" uid="uid://6jw7i65q526k" path="res://Localisation/gdo/GerudoTypography.ttf" id="1_gd8r0"]
+
+[resource]
+default_font = ExtResource("1_gd8r0")
+Label/fonts/font = ExtResource("1_e4vde")

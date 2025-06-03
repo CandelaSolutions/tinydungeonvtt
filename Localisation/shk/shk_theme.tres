@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://1qbjt0mpj68d"]
+
+[ext_resource type="FontFile" uid="uid://c1k8mk1jee4ac" path="res://Localisation/shk/BotW_Sheikah.ttf" id="1_urnkc"]
+
+[resource]
+default_font = ExtResource("1_urnkc")

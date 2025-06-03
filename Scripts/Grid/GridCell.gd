@@ -178,4 +178,4 @@ func assign_neighbour(direction: int, neighbour: GridCell, halfStepDirection: in
 	else:
 		oppositeDirection = direction + len(neighbours)/2
 	
-	neighbour.assign_neighbour(oppositeDirection, self, negativeHalfStepDirection, false)
+	neighbour.assign_neighbour(oppositeDirection, self, negativeHalfStepDirection, -1, false)

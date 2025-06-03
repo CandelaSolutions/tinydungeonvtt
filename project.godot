@@ -17,6 +17,15 @@ boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://Visuals/Textures/Godot/logo_vertical_monochrome_dark.png"
 config/icon="res://Visuals/Textures/Logo/tinydungeon3.png"
 
+[autoload]
+
+LocalisationManager="*res://Scripts/General/LocalisationManager.gd"
+
 [dotnet]
 
 project/assembly_name="TinyDungeonVTT"
+
+[internationalization]
+
+locale/translation_remaps={}
+locale/translations=PackedStringArray("res://Localisation/Translations.en_GB.translation", "res://Localisation/Translations.gdo.translation")
