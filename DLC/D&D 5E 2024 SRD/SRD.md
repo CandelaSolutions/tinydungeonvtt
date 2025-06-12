@@ -685,3 +685,470 @@ A ranged attack roll with a weapon underwater automatically misses a target beyo
 #### Fire Resistance
 
 Anything underwater has Resistance to Fire damage (explained in “Damage and Healing”).
+
+## Damage and Healing
+
+Injury and death are frequent threats, as detailed in the following rules.
+
+### Hit Points
+
+Hit Points represent durability and the will to live. Creatures with more Hit Points are more difficult to kill. Your Hit Point maximum is the number of Hit Points you have when uninjured. Your current Hit Points can be any number from that maximum down to 0, which is the lowest Hit Points can go.
+
+Whenever you take damage, subtract it from your Hit Points. Hit Point loss has no effect on your capabilities until you reach 0 Hit Points.
+
+If you have half your Hit Points or fewer, you’re Bloodied, which has no game effect on its own but which might trigger other game effects.
+
+> ##### Resting
+>
+> Adventurers can’t spend every hour adventuring. They need rest. Any creature can take hour-long Short Rests in the midst of a day and an 8-hour Long Rest to end it. Regaining Hit Points is one of the main benefits of a rest. “Rules Glossary” provides the rules for Short and Long Rests.
+
+### Damage Rolls
+
+Each weapon, spell, and damaging monster ability specifies the damage it deals. You roll the damage dice, add any modifiers, and deal the damage to your target. If there’s a penalty to the damage, it’s possible to deal 0 damage but not negative damage.
+
+When attacking with a weapon, you add your ability modifier—the same modifier used for the attack roll—to the damage roll. A spell tells you which dice to roll for damage and whether to add any modifiers. Unless a rule says otherwise, you don’t add your ability modifier to a fixed damage amount that doesn’t use a roll, such as the damage of a Blowgun. See “Equipment” for weapons’ damage dice and “Spells” for spells’ damage dice.
+
+### Critical Hits
+
+When you score a Critical Hit, you deal extra damage. Roll the attack’s damage dice twice, add them together, and add any relevant modifiers as normal. For example, if you score a Critical Hit with a Dagger, roll 2d4 for the damage rather than 1d4, and add your relevant ability modifier. If the attack involves other damage dice, such as from the Rogue’s Sneak Attack feature, you also roll those dice twice.
+
+### Saving Throws and Damage
+
+Damage dealt via saving throws uses these rules.
+
+#### Damage against Multiple Targets
+
+When you create a damaging effect that forces two or more targets to make saving throws against it at the same time, roll the damage once for all the targets. For example, when a wizard casts Fireball, the spell’s damage is rolled once for all creatures caught in the blast.
+
+#### Half Damage
+
+Many saving throw effects deal half damage (round down) to a target when the target succeeds on the saving throw. The halved damage is equal to half the damage that would be dealt on a failed save.
+
+### Damage Types
+
+Each instance of damage has a type, like Fire or Slashing. Damage types are listed in “Rules Glossary” and have no rules of their own, but other rules, such as Resistance, rely on damage types.
+
+### Resistance and Vulnerability
+
+Some creatures and objects have Resistance or Vulnerability to certain damage types. If you have Resistance to a damage type, damage of that type is halved against you (round down). If you have Vulnerability to a damage type, damage of that type is doubled against you. For example, if you have Resistance to Cold damage, such damage is halved against you, and if you have Vulnerability to Fire damage, such damage is doubled against you.
+
+#### No Stacking
+
+Multiple instances of Resistance or Vulnerability that affect the same damage type count as only one instance. For example, if you have Resistance to Necrotic damage as well as Resistance to all damage, Necrotic damage is reduced by half against you.
+
+#### Order of Application
+
+Modifiers to damage are applied in the following order: adjustments such as bonuses, penalties, or multipliers are applied first; Resistance is applied second; and Vulnerability is applied third.
+
+For example, a creature has Resistance to all damage and Vulnerability to Fire damage, and it’s within a magical aura that reduces all damage by 5. If it takes 28 Fire damage, the damage is first reduced by 5 (to 23), then halved for the creature’s Resistance (and rounded down to 11), then doubled for its Vulnerability (to 22).
+
+### Immunity
+
+Some creatures and objects have Immunity to certain damage types and conditions. Immunity to a damage type means you don’t take damage of that type, and Immunity to a condition means you aren’t affected by it.
+
+### Healing
+
+Hit Points can be restored by magic, such as the *Cure Wounds* spell or a *Potion of Healing*, or by a Short or Long Rest (see “Rules Glossary”).
+
+When you receive healing, add the restored Hit Points to your current Hit Points. Your Hit Points can’t exceed your Hit Point maximum, so any Hit Points regained in excess of the maximum are lost. For example, if you receive 8 Hit Points of healing and have 14 Hit Points and a Hit Point maximum of 20, you regain 6 Hit Points, not 8.
+
+### Dropping to 0 Hit Points
+
+When a creature drops to 0 Hit Points, it either dies outright or falls unconscious, as explained below.
+
+#### Instant Death
+
+Here are the main ways a creature can die instantly.
+
+***Monster Death.*** A monster dies the instant it drops to 0 Hit Points, although a Game Master can ignore this rule for an individual monster and treat it like a character.
+
+***Hit Point Maximum of 0.*** A creature dies if its Hit Point maximum reaches 0. Certain effects drain life energy, reducing a creature’s Hit Point maximum.
+
+***Massive Damage.*** When damage reduces a character to 0 Hit Points and damage remains, the character dies if the remainder equals or exceeds their Hit Point maximum. For example, if your character has a Hit Point maximum of 12, currently has 6 Hit Points, and takes 18 damage, the character drops to 0 Hit Points, but 12 damage remains. The character then dies, since 12 equals their Hit Point maximum.
+
+#### Character Demise
+
+If your character dies, others might find a magical way to revive your character, such as with the *Raise Dead* spell. Or talk with the GM about making a new character to join the group. “Rules Glossary” has more information on being dead.
+
+#### Falling Unconscious
+
+If you reach 0 Hit Points and don’t die instantly, you have the Unconscious condition (see “Rules Glossary”) until you regain any Hit Points, and you now face making Death Saving Throws (see below).
+
+#### Death Saving Throws
+
+Whenever you start your turn with 0 Hit Points, you must make a Death Saving Throw to determine whether you creep closer to death or hang on to life. Unlike other saving throws, this one isn’t tied to an ability score. You’re in the hands of fate now.
+
+***Three Successes/Failures.*** Roll 1d20. If the roll is 10 or higher, you succeed. Otherwise, you fail. A success or failure has no effect by itself. On your third success, you become Stable (see “Stabilizing a Character” below). On your third failure, you die.
+
+The successes and failures don’t need to be consecutive; keep track of both until you collect three of a kind. The number of both is reset to zero when you regain any Hit Points or become Stable.
+
+***Rolling a 1 or 20.*** When you roll a 1 on the d20 for a Death Saving Throw, you suffer two failures. If you roll a 20 on the d20, you regain 1 Hit Point.
+
+***Damage at 0 Hit Points.*** If you take any damage while you have 0 Hit Points, you suffer a Death Saving Throw failure. If the damage is from a Critical Hit, you suffer two failures instead. If the damage equals or exceeds your Hit Point maximum, you die.
+
+#### Stabilizing a Character
+
+You can take the Help action to try to stabilize a creature with 0 Hit Points, which requires a successful DC 10 Wisdom (Medicine) check.
+
+A Stable creature doesn’t make Death Saving Throws even though it has 0 Hit Points, but it still has the Unconscious condition. If the creature takes damage, it stops being Stable and starts making Death Saving Throws again. A Stable creature that isn’t healed regains 1 Hit Point after 1d4 hours.
+
+> ##### Knocking Out a Creature
+>
+> When you would reduce a creature to 0 Hit Points with a melee attack, you can instead reduce the creature to 1 Hit Point and give it the Unconscious condition. It then starts a Short Rest, at the end of which that condition ends on it. The condition ends early if the creature regains any Hit Points or if someone takes an action to administer first aid to it, making a successful DC 10 Wisdom (Medicine) check.
+
+### Temporary Hit Points
+
+Some spells and other effects confer Temporary Hit Points, which are a buffer against losing actual Hit Points, as explained below.
+
+#### Lose Temporary Hit Points First
+
+If you have Temporary Hit Points and take damage, those points are lost first, and any leftover damage carries over to your Hit Points. For example, if you have 5 Temporary Hit Points and take 7 damage, you lose those points and then lose 2 Hit Points.
+
+#### Duration
+
+Temporary Hit Points last until they’re depleted or you finish a Long Rest (see “Rules Glossary”).
+
+#### They Don’t Stack
+
+Temporary Hit Points can’t be added together. If you have Temporary Hit Points and receive more of them, you decide whether to keep the ones you have or to gain the new ones. For example, if a spell grants you 12 Temporary Hit Points when you already have 10, you can have 12 or 10, not 22.
+
+#### They’re Not Hit Points or Healing
+
+Temporary Hit Points can’t be added to your Hit Points, healing can’t restore them, and receiving Temporary Hit Points doesn’t count as healing. Because Temporary Hit Points aren’t Hit Points, a creature can be at full Hit Points and receive Temporary Hit Points.
+
+If you have 0 Hit Points, receiving Temporary Hit Points doesn’t restore you to consciousness. Only true healing can save you.
+
+# Character Creation
+
+## Choose a Character Sheet
+
+You’ll record the main details of your character on a character sheet. Throughout this chapter, we use the term “character sheet” to mean whatever you use to track your character’s details, whether it’s a printed character sheet, a digital character sheet, or plain paper. Choose whichever style of sheet works for you, and then embark on creating a character!
+
+## Create Your Character
+
+Here are the steps to make a character; each step is explored in detail:
+
+1. **Choose a Class.** Every adventurer is a member of a class. A class broadly describes a character’s vocation, special talents, and favored tactics.
+2. **Determine Origin.** A character’s origin includes two elements: background and species. How did the character spend the years leading up to a life of adventure? Who are the character’s ancestors? You can also choose your character’s languages.
+3. **Determine Ability Scores.** Much of what your character does in the game depends on the character’s six abilities.
+4. **Choose an Alignment.** Alignment is a shorthand for your character’s moral compass.
+5. **Fill in Details.** Using the choices you’ve made, fill in the remaining details on your character sheet.
+
+### Step 1: Choose Class
+
+Choose a class, and write it on your character sheet. The Class Overview table summarizes the classes. See “Classes” for the classes’ details.
+
+##### Class Overview
+
+| Class | Likes... | Primary Ability | Complexity |
+|:------|:---------|:----------------|:-----------|
+| Barbarian | Battle | Strength | Average |
+| Bard | Performing | Charisma | High |
+| Cleric | Gods | Wisdom | Average |
+| Druid | Nature | Wisdom | High |
+| Fighter | Weapons | Strength or Dexterity | Low |
+| Monk | Unarmed combat | Dexterity and Wisdom | High |
+| Paladin | Defense | Strength and Charisma | Average |
+| Ranger | Survival | Dexterity and Wisdom | Average |
+| Rogue | Stealth | Dexterity | Low |
+| Sorcerer | Power | Charisma | High |
+| Warlock | Occult lore | Charisma | High |
+| Wizard | Spellbooks | Intelligence | Average |
+
+#### Write Your Level
+
+Write your character’s level on your character sheet. Typically, a character starts at level 1 and advances in level by adventuring and gaining Experience Points (XP).
+
+***Write Your XP.*** Also record your Experience Points. A level 1 character has 0 XP.
+
+***Starting at a Higher Level.*** Your GM might start you at a higher level. If you start at level 3 or higher, write your chosen subclass on your character sheet. See the “Starting at Higher Levels” section later in “Character Creation” for more information.
+
+#### Note Armor Training
+
+Your class might give you training with certain categories of armor. Note your armor training on your character sheet. Armor training with a kind of armor means you can wear that armor effectively, gaining defensive bonuses from it. The categories of armor are described in “Equipment.”
+
+### Step 2: Character Origin
+
+Determining your character’s origin involves choosing a background, a species, and two languages.
+
+A character’s background represents the place and occupation that were most formative for the character. The combination of background, species, and languages provides fertile soil for your imagination as you ponder your character’s earliest days.
+
+#### Choose a Background
+
+Choose your character’s background, and write it on your character sheet. You can choose any of the backgrounds detailed in “Character Origins,” and your GM might offer additional backgrounds as options.
+
+The background you choose influences step 3, when you determine your character’s ability scores. If you’re having trouble choosing, the Ability Scores and Backgrounds table shows which backgrounds benefit which ability scores. Look for your class’s primary ability there.
+
+##### Ability Scores and Backgrounds
+| Ability | Background |
+|:--------|:-----------|
+| Strength | Soldier |
+| Dexterity | Soldier |
+| Constitution | Soldier |
+| Intelligence | Acolyte |
+| Wisdom | Acolyte |
+| Charisma | Acolyte |
+
+***Record Your Feat.*** A background gives you a feat, which grants your character particular capabilities. Feats are detailed in “Feats.” Write the feat on your character sheet.
+
+***Note Proficiencies.*** Your background gives proficiency in two skills and with one tool. Record this information on your character sheet.
+
+Your class also gives proficiencies. Check your class description in “Classes” and note the proficiencies on your character sheet.
+
+The features table in your class description shows your Proficiency Bonus (described in “Playing the Game”), which is +2 for a level 1 character. Note this number on your character sheet. You’ll fill in other numbers connected to these proficiencies in step 5.
+
+#### Choose Starting Equipment
+
+Your background and class both provide starting equipment. Any coins that you gain at this step can be immediately spent on equipment from “Equipment.”
+
+Record your chosen equipment on your character sheet. Equipment is described in “Equipment,” but for now you can just write it all down and look up the specifics in “Equipment” later. Note any coins you have left after purchasing your equipment.
+
+#### Choose a Species
+
+Choose a species for your character. The following species options are detailed in “Character Origins”: Dragonborn, Dwarf, Elf, Gnome, Goliath, Halfling, Human, Orc, and Tiefling. Once you’ve chosen a species, write it on your character sheet. Then record your species’ traits.
+
+Your character’s size and Speed are determined by the character’s species; record these in the appropriate places on your character sheet as well (you may write just the first letter of your size).
+
+#### Imagine Your Past and Present
+
+Let your character’s background and species inspire how you imagine their past. That past fed into the character’s present. With that in mind, consider answers to the following questions as your character:
+
+- Who raised you?
+- Who was your dearest childhood friend?
+- Did you grow up with a pet?
+- Have you fallen in love? If so, with whom?
+- Did you join an organization, such as a guild or religion? If so, are you still a member of it?
+- What elements of your past inspire you to go on adventures now?
+
+#### Choose Languages
+
+Your character knows at least three languages: Common plus two languages you roll or choose from the Standard Languages table. Knowledge of a language means your character can communicate in it, read it, and write it. Your class and other features might also give you languages.
+
+The Standard Languages table lists languages that are widespread in the setting. Every player character knows Common. The other standard languages originated with the first members of the most prominent species in the setting and have since spread widely.
+
+##### Standard Languages
+| 1d12 | Language |
+|:----:|:---------|
+| — | Common |
+| 1 | Common Sign Language |
+| 2 | Draconic |
+| 3–4 | Dwarvish |
+| 5–6 | Elvish |
+| 7 | Giant |
+| 8 | Gnomish |
+| 9 | Goblin |
+| 10–11 | Halfling |
+| 12 | Orc |
+
+The Rare Languages table lists languages that are either secret or derived from other planes of existence and thus less widespread in the worlds of the Material Plane. Some features let a character learn a rare language.
+
+##### Rare Languages
+| Language |
+|:---------|
+| Abyssal |
+| Celestial |
+| Deep Speech |
+| Druidic |
+| Infernal |
+| Primordial* |
+| Sylvan |
+| Thieves’ Cant |
+| Undercommon |
+
+*Primordial includes the Aquan, Auran, Ignan, and Terran dialects. Creatures that know one of these dialects can communicate with those that know a different one.
+
+### Step 3: Ability Scores
+
+To determine your character’s ability scores, you first generate a set of six numbers using the instructions below and then assign them to your six abilities. “Playing the Game” explains what each ability means.
+
+#### Generate Your Scores
+
+Determine your ability scores by using one of the following three methods. Your GM might prefer you to use a particular one.
+
+***Standard Array.*** Use the following six scores for your abilities: 15, 14, 13, 12, 10, 8.
+
+***Random Generation.*** Roll four d6s and record the total of the highest three dice. Do this five more times, so you have six numbers.
+
+***Point Cost.*** You have 27 points to spend on your ability scores. The cost of each score is shown on the Ability Score Point Costs table. For example, a score of 14 costs 7 of your 27 points.
+
+##### Ability Score Point Costs
+| Score | Cost |
+|:-----:|:----:|
+| 8 | 0 |
+| 9 | 1 |
+| 10 | 2 |
+| 11 | 3 |
+| 12 | 4 |
+| 13 | 5 |
+| 14 | 7 |
+| 15 | 9 |
+
+#### Assign Ability Scores
+
+Once you’ve generated six scores, assign them to Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma, keeping in mind your class’s primary ability. Fill in the ability modifiers as well.
+
+If you’re using the Standard Array option, consult the Standard Array by Class table for suggestions on where to assign scores for your character’s class. The table puts the highest scores in a class’s main abilities. If you used a different method to generate the scores, you may still use this table to guide where you place your highest and lowest scores.
+
+##### Standard Array by Class
+| Class | Str. | Dex. | Con. | Int. | Wis. | Cha. |
+|:------|:----:|:----:|:----:|:----:|:----:|:----:|
+| Barbarian | 15 | 13 | 14 | 10 | 12 | 8 |
+| Bard | 8 | 14 | 12 | 13 | 10 | 15 |
+| Cleric | 14 | 8 | 13 | 10 | 15 | 12 |
+| Druid | 8 | 12 | 14 | 13 | 15 | 10 |
+| Fighter | 15 | 14 | 13 | 8 | 10 | 12 |
+| Monk | 12 | 15 | 13 | 10 | 14 | 8 |
+| Paladin | 15 | 10 | 13 | 8 | 12 | 14 |
+| Ranger | 12 | 15 | 13 | 8 | 14 | 10 |
+| Rogue | 12 | 15 | 13 | 14 | 10 | 8 |
+| Sorcerer | 10 | 13 | 14 | 8 | 12 | 15 |
+| Warlock | 8 | 14 | 13 | 12 | 10 | 15 |
+| Wizard | 8 | 12 | 13 | 15 | 14 | 10 |
+
+#### Adjust Ability Scores
+
+After assigning your ability scores, adjust them according to your background. Your background lists three abilities; increase one of those scores by 2 and a different one by 1, or increase all three by 1. None of these increases can raise a score above 20.
+
+Some players like to increase their class’s primary ability, while others prefer to increase a low score.
+
+#### Determine Ability Modifiers
+
+Finally, determine your ability modifiers using the Ability Scores and Modifiers table. Write the modifier next to each of your scores.
+
+##### Ability Scores and Modifiers
+| Score | Modifier |
+|:-----:|:---------|
+| 3 | −4 |
+| 4–5 | −3 |
+| 6–7 | −2 |
+| 8–9 | −1 |
+| 10–11 | +0 |
+| 12–13 | +1 |
+| 14–15 | +2 |
+| 16–17 | +3 |
+| 18–19 | +4 |
+| 20 | +5 |
+
+### Step 4: Alignment
+
+Choose your character’s alignment from the options below, and note it on your character sheet.
+
+The game assumes that player characters aren’t of an evil alignment. Check with your GM before making an evil character.
+
+#### The Nine Alignments
+
+A creature’s alignment broadly describes its ethical attitudes and ideals. Alignment is a combination of two factors: one identifies morality (good, evil, or neutral), and the other describes attitudes toward order (lawful, chaotic, or neutral).
+
+The summaries of the alignments below describe the typical behavior of a creature with that alignment; individuals can vary from that behavior.
+
+***Lawful Good (LG).*** Lawful Good creatures endeavor to do the right thing as expected by society. Someone who fights injustice and protects the innocent without hesitation is probably Lawful Good.
+
+***Neutral Good (NG).*** Neutral Good creatures do the best they can, working within rules but not feeling bound by them. A kindly person who helps others according to their needs is probably Neutral Good.
+
+***Chaotic Good (CG).*** Chaotic Good creatures act as their conscience directs with little regard for what others expect. A rebel who waylays a cruel baron’s tax collectors and uses the stolen money to help the poor is probably Chaotic Good.
+
+***Lawful Neutral (LN).*** Lawful Neutral individuals act in accordance with law, tradition, or personal codes. Someone who follows a disciplined rule of life—and isn’t swayed either by the demands of those in need or by the temptations of evil—is probably Lawful Neutral.
+
+***Neutral (N).*** Neutral is the alignment of those who prefer to avoid moral questions and don’t take sides, doing what seems best at the time. Someone who’s bored by moral debate is probably Neutral.
+
+***Chaotic Neutral (CN).*** Chaotic Neutral creatures follow their whims, valuing their personal freedom above all else. A scoundrel who wanders the land living by their wits is probably Chaotic Neutral.
+
+***Lawful Evil (LE).*** Lawful Evil creatures methodically take what they want within the limits of a code of tradition, loyalty, or order. An aristocrat exploiting citizens while scheming for power is probably Lawful Evil.
+
+***Neutral Evil (NE).*** Neutral Evil is the alignment of those who are untroubled by the harm they cause as they pursue their desires. A criminal who robs and murders as they please is probably Neutral Evil.
+
+***Chaotic Evil (CE).*** Chaotic Evil creatures act with arbitrary violence, spurred by their hatred or bloodlust. A villain pursuing schemes of vengeance and havoc is probably Chaotic Evil.
+
+> ##### Unaligned Creatures
+>
+> Most creatures that lack the capacity for rational thought don’t have alignments; they are unaligned. Sharks are savage predators, for example, but they aren’t evil; they are unaligned.
+
+### Step 5: Character Creation Details
+
+Now fill in the rest of your character sheet.
+
+#### Record Class Features
+
+Look at your class’s feature table in “Classes,” and write down the level 1 features. The class features are detailed there too.
+
+Some class features offer choices. Make sure to read all your features and make any offered choices.
+
+#### Fill In Numbers
+
+Note these numbers on your character sheet.
+
+***Saving Throws.*** For the saving throws you have proficiency in, add your Proficiency Bonus to the appropriate ability modifier and note the total. Some players also like to note the modifier for saving throws they’re not proficient in, which is just the relevant ability modifier.
+
+***Skills.*** For skills you have proficiency in, add your Proficiency Bonus to the ability modifier associated with that skill, and note the total. You might also wish to note the modifier for skills you’re not proficient in, which is just the relevant ability modifier.
+
+***Passive Perception.*** Sometimes your GM will determine whether your character notices something without asking you to make a Wisdom (Perception) check; the GM uses your Passive Perception instead. Passive Perception is a score that reflects a general awareness of your surroundings when you’re not actively looking for something. Use this formula to determine your Passive Perception score:
+
+**Passive Perception** = 10 + Wisdom (Perception) check modifier
+
+Include all modifiers that apply to your Wisdom (Perception) checks. For example, if your character has a Wisdom of 15 and proficiency in the Perception skill, you have a Passive Perception of 14 (10 + 2 for your Wisdom modifier + 2 for proficiency).
+
+***Hit Points.*** Your class and Constitution modifier determine your Hit Point maximum at level 1, as shown on the Level 1 Hit Points by Class table.
+
+##### Level 1 Hit Points by Class
+| Class | Hit Point Maximum |
+|:------|:------------------|
+| Barbarian | 12 + Con. modifier |
+| Fighter, Paladin, or Ranger | 10 + Con. modifier |
+| Bard, Cleric, Druid, Monk, Rogue, or Warlock | 8 + Con. modifier |
+| Sorcerer or Wizard | 6 + Con. modifier |
+
+The character sheet includes room to note your current Hit Points when you take damage, as well as any Temporary Hit Points you might gain. There’s also space to track Death Saving Throws.
+
+***Hit Point Dice.*** Your class’s description tells you the die type of your character’s Hit Point Dice (or Hit Dice for short); write this on your character sheet. At level 1, your character has 1 Hit Die. You can spend Hit Dice during a Short Rest to recover Hit Points. Your character sheet also includes space to note how many Hit Dice you’ve spent.
+
+***Initiative.*** Write your Dexterity modifier in the space for Initiative on your character sheet.
+
+***Armor Class.*** Without armor or a shield, your base Armor Class is 10 plus your Dexterity modifier. If your starting equipment includes armor or a Shield (or both), calculate your AC using the rules in “Equipment.” A class feature might give you a different way to calculate your AC.
+
+***Attacks.*** In the Weapons & Damage Cantrips section of the character sheet, write your starting weapons. The attack roll bonus for a weapon with which you have proficiency is one of the following unless a weapon’s property says otherwise:
+
+**Melee attack bonus** = Strength modifier + Proficiency Bonus
+
+**Ranged attack bonus** = Dexterity modifier  + Proficiency Bonus
+
+Look up the damage and properties of your weapons in “Equipment.” You add the same ability modifier you use for attacks with a weapon to your damage rolls with that weapon.
+
+***Spellcasting.*** Note both the saving throw DC for your spells and the attack bonus for attacks you make with them, using these formulas:
+
+**Spell save DC** = 8 + spellcasting ability modifier + Proficiency Bonus
+
+**Spell attack bonus** = spellcasting ability modifier + Proficiency Bonus
+
+Your spellcasting ability modifier for a spell is determined by whatever feature gives you the ability to cast the spell.
+
+***Spell Slots, Cantrips, and Prepared Spells.*** If your class gives you the Spellcasting or Pact Magic feature, your class features table shows the number of spell slots you have available, how many cantrips you know, and how many spells you can prepare. Choose your cantrips and prepared spells, and note them—along with your number of spell slots—on your character sheet.
+
+## Level Advancement
+
+While going on adventures, your character gains experience, represented by Experience Points (XP). A character who reaches a specified Experience Point total advances in capability. This advancement is called gaining a level.
+
+The Character Advancement table lists the XP you need to advance to a level and the Proficiency Bonus for a character of that level. When your XP total equals or exceeds a number in the Experience Points column, you reach the corresponding level.
+
+##### Character Advancement
+| Level | Experience Points | Proficiency Bonus |
+|:-----:|------------------:|:-----------------:|
+| 1 | 0 | +2 |
+| 2 | 300 | +2 |
+| 3 | 900 | +2 |
+| 4 | 2,700 | +2 |
+| 5 | 6,500 | +3 |
+| 6 | 14,000 | +3 |
+| 7 | 23,000 | +3 |
+| 8 | 34,000 | +3 |
+| 9 | 48,000 | +4 |
+| 10 | 64,000 | +4 |
+| 11 | 85,000 | +4 |
+| 12 | 100,000 | +4 |
+| 13 | 120,000 | +5 |
+| 14 | 140,000 | +5 |
+| 15 | 165,000 | +5 |
+| 16 | 195,000 | +5 |
+| 17 | 225,000 | +6 |
+| 18 | 265,000 | +6 |
+| 19 | 305,000 | +6 |
+| 20 | 355,000 | +6 |
