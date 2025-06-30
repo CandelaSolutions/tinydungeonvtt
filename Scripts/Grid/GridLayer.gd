@@ -75,4 +75,5 @@ func _init(gridtype: int, width: int, length: int) -> void:
 				if (y > 0) && (x < (width - 1 - y%2)):
 					cell.assign_neighbour(11, get_children()[i-width+1+y%2])
 				cell.border.generate_borders()
+				cell.border.generate_pillars()
 				add_child(cell)
