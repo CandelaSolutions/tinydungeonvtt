@@ -62,18 +62,38 @@ func _init(gridtype: int, width: int, length: int) -> void:
 			6:
 				var cell = GridCell.new(Vector3(x + (y * 0.5 - y / 2), 0, y * 0.75 / cos(PI / 6)), gridtype)
 				cell.generate_cell()
+
 				if (x > 0):
 					cell.assign_neighbour(6, get_children()[i-1])
+				else:
+					cell.assign_edge(6)
+
 				if (y > 0) && (x > (1 - y%2)):
 					cell.assign_neighbour(7, get_children()[i-width-2+y%2])
+				else:
+					cell.assign_edge(7)
+
 				if (y > 0) && (x > -y%2):
 					cell.assign_neighbour(8, get_children()[i-width-1+y%2])
+				else:
+					cell.assign_edge(8)
+
 				if (y > 1):
 					cell.assign_neighbour(9, get_children()[i-2*width])
+				else:
+					cell.assign_edge(9)
+
 				if (y > 0) && (x < (width - y%2)):
 					cell.assign_neighbour(10, get_children()[i-width+y%2])
+				else:
+					cell.assign_edge(10)
+
 				if (y > 0) && (x < (width - 1 - y%2)):
 					cell.assign_neighbour(11, get_children()[i-width+1+y%2])
+				else:
+					cell.assign_edge(11)
+
 				cell.border.generate_borders()
 				cell.border.generate_pillars()
+				cell.generate_walls()
 				add_child(cell)

@@ -14,9 +14,9 @@ func _init(origin: Vector3, type: int, flip: bool = false) -> void:
 	gridType = type
 
 	if flip:
-		points = generate_points(gridType, 0.4, PI - PI/gridType)
+		points = generate_points(gridType, 0.5, PI - PI/gridType)
 	else:
-		points = generate_points(gridType, 0.4)
+		points = generate_points(gridType, 0.5)
 
 	generate_empty_neighbours_list(flip)
 
@@ -72,7 +72,61 @@ func generate_cell(material: Material = null) -> void:
 	if material:
 		mesh_instance.material_override = material
 	add_child(mesh_instance)
-		
+	
+func generate_walls():
+	var closeNeighbours = neighbours.filter(func(element): return element[0] == neighbourType.Side)
+	var halfGrid = int(gridType/2)
+	for i in range(gridType):
+		if closeNeighbours[i].size() == 1 or str(closeNeighbours[i][1]) == "EdgeCase":
+			continue
+		var corner1 = points[i]
+		var corner2 = points[i+1 if i+1<gridType else 0]
+		var corner3 = closeNeighbours[i][1].points[halfGrid+1+i if i < halfGrid-1 else -halfGrid+1+i] + (closeNeighbours[i][1].transform.origin - transform.origin)
+		var corner4 = closeNeighbours[i][1].points[halfGrid+i if i < halfGrid else -halfGrid+i] + (closeNeighbours[i][1].transform.origin - transform.origin)
+		generate_wall(corner1, corner2, corner3, corner4)
+
+func generate_wall(corner1: Vector3, corner2: Vector3, corner3: Vector3, corner4: Vector3):
+	var mesh_instance = MeshInstance3D.new()
+	var vertices = PackedVector3Array()
+	var indices = PackedInt32Array()
+	var normals = PackedVector3Array()
+	if corner1.y == corner3.y and corner2.y != corner4.y:
+		vertices.append(corner1)
+		vertices.append(corner2)
+		vertices.append(corner4)
+		indices.append(0)
+		indices.append(2)
+		indices.append(1)
+	elif corner1.y != corner3.y and corner2.y == corner4.y:
+		vertices.append(corner1)
+		vertices.append(corner3)
+		vertices.append(corner4)
+		indices.append(0)
+		indices.append(1)
+		indices.append(2)
+	elif corner1.y != corner3.y and corner2.y != corner4.y:
+		vertices.append(corner1)
+		vertices.append(corner2)
+		vertices.append(corner3)
+		vertices.append(corner4)
+		indices.append(0)
+		indices.append(3)
+		indices.append(1)
+		indices.append(0)
+		indices.append(2)
+		indices.append(3)
+	else:
+		return
+
+	var arr_mesh = ArrayMesh.new()
+	var arrays = []
+	arrays.resize(Mesh.ARRAY_MAX)
+	arrays[Mesh.ARRAY_VERTEX] = vertices
+	arrays[Mesh.ARRAY_INDEX] = indices
+	arr_mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES, arrays)
+	mesh_instance.mesh = arr_mesh
+	add_child(mesh_instance)
+
 func generate_empty_neighbours_list(flip : bool):
 	match gridType:
 		3:
@@ -136,3 +190,6 @@ func assign_neighbour(direction: int, neighbour: GridCell, halfStepDirection: in
 		oppositeDirection = direction + len(neighbours)/2
 	
 	neighbour.assign_neighbour(oppositeDirection, self, negativeHalfStepDirection, -1, false)
+
+func assign_edge(direction: int) -> void:
+	neighbours[direction].append("EdgeCase")
