@@ -9,7 +9,7 @@ var border: GridBorder
 var cornerHeight: Array[float] = []
 
 func _init(origin: Vector3, type: int, flip: bool = false) -> void:
-	cornerHeight = [0,0,0,0,0,0]
+	cornerHeight = [0,0.4,0,0,0,0]
 	transform.origin = origin
 	gridType = type
 

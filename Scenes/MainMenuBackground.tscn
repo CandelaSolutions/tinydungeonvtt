@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://crl3xk2gb8r5m"]
+[gd_scene load_steps=6 format=3 uid="uid://crl3xk2gb8r5m"]
 
 [ext_resource type="Shader" uid="uid://cm2mc80omyd37" path="res://Visuals/Shaders/Sky.gdshader" id="1_okd8m"]
+[ext_resource type="Script" uid="uid://b666u25k50vaj" path="res://Scripts/Player/BoomCamera.gd" id="2_jw1i2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nagsr"]
 shader = ExtResource("1_okd8m")
@@ -17,10 +18,6 @@ reflected_light_source = 2
 
 [node name="MainMenuBackground" type="Node3D"]
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.923879, 0.277589, -0.263422, 0, 0.688355, 0.725375, 0.382683, 0.670159, -0.635957, 1.802, 2.598, -1.84)
-current = true
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.745441, 0.666571, 0, -0.666571, 0.745441, 0, 1.25162, 0)
 light_energy = 2.005
@@ -28,3 +25,10 @@ sky_mode = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_bqjj8")
+
+[node name="BoomCamera" type="Camera3D" parent="."]
+transform = Transform3D(0.903009, 0.200695, -0.379586, 0, 0.883927, 0.467376, 0.429375, -0.422078, 0.7983, -3.79623, 4.67421, 7.98376)
+script = ExtResource("2_jw1i2")
+horizontalRotation = -22.435
+verticalRotation = -12.08
+metadata/_custom_type_script = "uid://b666u25k50vaj"
