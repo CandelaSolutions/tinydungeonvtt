@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://coaut8xc8nnew"]
+
+[ext_resource type="Script" uid="uid://bcn7qcxxhcc3p" path="res://Scripts/General/Console.gd" id="1_n5ki7"]
+
+[node name="Console" type="LineEdit"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_n5ki7")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -300.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Spacer" type="Control" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="text_submitted" from="." to="." method="_on_text_submitted"]
