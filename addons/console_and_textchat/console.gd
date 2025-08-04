@@ -381,4 +381,3 @@ func _handle_text_input_line_visibility() -> void:
 		text_input_line.hide()
 	else:
 		text_input_line.show()
-
