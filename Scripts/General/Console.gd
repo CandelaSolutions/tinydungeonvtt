@@ -1,7 +1,12 @@
 @tool
 extends LineEdit
 
+@onready var scroll = $ScrollContainer
+@onready var scrollbar : VScrollBar = scroll.get_v_scroll_bar()
 @onready var logsContainer = $ScrollContainer/VBoxContainer
+
+func _ready() -> void:
+	scrollbar.connect("changed", scrollbar_changed)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == 1:
@@ -15,3 +20,6 @@ func _on_text_submitted(new_text: String) -> void:
 	logsContainer.add_child(label)
 	clear()
 	release_focus()
+
+func scrollbar_changed() -> void:
+	scroll.scroll_vertical = scrollbar.max_value
