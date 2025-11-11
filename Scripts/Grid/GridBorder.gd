@@ -1,7 +1,7 @@
 extends Node3D
 class_name GridBorder
 
-var borderMaterial = preload("res://Visuals/Materials/border.tres")
+var borderMaterial = preload("res://Materials/border.tres")
 
 func _init() -> void:
 	pass

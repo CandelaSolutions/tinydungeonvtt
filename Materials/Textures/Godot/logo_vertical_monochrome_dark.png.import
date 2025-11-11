@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da56jl21xkcyn"
-path="res://.godot/imported/tinydungeon1.png-5164a2a33d6e7fbd8caffbec91f02f09.ctex"
+uid="uid://q4a6e5h78xgd"
+path="res://.godot/imported/logo_vertical_monochrome_dark.png-5d777ef509bfcde9049a43d76ccdfcd5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Visuals/Textures/Logo/tinydungeon1.png"
-dest_files=["res://.godot/imported/tinydungeon1.png-5164a2a33d6e7fbd8caffbec91f02f09.ctex"]
+source_file="res://Materials/Textures/Godot/logo_vertical_monochrome_dark.png"
+dest_files=["res://.godot/imported/logo_vertical_monochrome_dark.png-5d777ef509bfcde9049a43d76ccdfcd5.ctex"]
 
 [params]
 

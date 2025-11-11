@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://ds224nmqvvxqg"]
+
+[ext_resource type="Script" uid="uid://2oyuunsw0tr6" path="res://Scripts/SystemManagement/SourceLibrary.gd" id="1_36pgr"]
+[ext_resource type="Texture2D" uid="uid://bw0jvea76ymlf" path="res://DLC/TTRPGs/Core Rulebooks/D&D 5E/img/phb/cover.jpg" id="2_quon1"]
+
+[node name="Library" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabBar" type="TabBar" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+current_tab = 0
+tab_count = 2
+tab_0/title = "Sourcebooks"
+tab_1/title = "Audio"
+
+[node name="SourceLibrary" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 5
+script = ExtResource("1_36pgr")
+
+[node name="Button" type="Button" parent="SourceLibrary"]
+custom_minimum_size = Vector2(210, 297)
+layout_mode = 2
+text = "Player's Handbook"
+icon = ExtResource("2_quon1")
+autowrap_mode = 3
+icon_alignment = 1
+vertical_icon_alignment = 2
+expand_icon = true
+
+[node name="Button2" type="Button" parent="SourceLibrary"]
+custom_minimum_size = Vector2(210, 297)
+layout_mode = 2
+text = "Player's Handbook"
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true

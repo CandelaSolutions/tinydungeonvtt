@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3linnl0ykllx"]
+[gd_scene load_steps=10 format=3 uid="uid://b3linnl0ykllx"]
 
 [ext_resource type="PackedScene" uid="uid://crl3xk2gb8r5m" path="res://Scenes/MainMenuBackground.tscn" id="2_gl6un"]
 [ext_resource type="Script" uid="uid://cnd45lqaq57dw" path="res://Scripts/Grid/Grid.gd" id="3_j5yw3"]
 [ext_resource type="PackedScene" uid="uid://ftkq2mt1m15c" path="res://Scenes/MainMenu.tscn" id="3_kldst"]
+[ext_resource type="PackedScene" uid="uid://coaut8xc8nnew" path="res://Scenes/Console.tscn" id="4_kldst"]
+[ext_resource type="Texture2D" uid="uid://byotuu7yki2hd" path="res://DLC/Eberron - City Of Lost Souls/Materials/Textures/g8ejxen4e1d51-1388395982.jpg" id="5_b2bpf"]
+[ext_resource type="ArrayMesh" uid="uid://c8hqygeiylwst" path="res://Models/Heroforge/Hero_Forge_Explorer_Demo.obj" id="6_fgofq"]
+[ext_resource type="ArrayMesh" uid="uid://duxo7ghtabe4d" path="res://Models/Heroforge/Hero_Forge_Paladin_Demo.obj" id="7_2irst"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7lihs"]
+size = Vector2(24, 24)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgofq"]
+albedo_texture = ExtResource("5_b2bpf")
 
 [node name="Game" type="Node"]
 
@@ -12,3 +22,19 @@ script = ExtResource("3_j5yw3")
 [node name="MainMenuBackground" parent="." instance=ExtResource("2_gl6un")]
 
 [node name="MainMenu" parent="." instance=ExtResource("3_kldst")]
+visible = false
+
+[node name="Console" parent="." instance=ExtResource("4_kldst")]
+
+[node name="Map" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5, 0, 11.5)
+mesh = SubResource("PlaneMesh_7lihs")
+surface_material_override/0 = SubResource("StandardMaterial3D_fgofq")
+
+[node name="Ranger" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0211595, -0.0339452, 1.48379e-09, 0, -1.74846e-09, -0.04, 0.0339452, 0.0211595, -9.24909e-10, 5, 0.092, 8)
+mesh = ExtResource("6_fgofq")
+
+[node name="Paladin" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0247851, 0.0313958, -1.37235e-09, 2.93642e-23, -1.74846e-09, -0.04, -0.0313958, -0.0247851, 1.08339e-09, 11, 0.197, 8)
+mesh = ExtResource("7_2irst")

@@ -48,7 +48,7 @@ func _init(gridtype: int, width: int, length: int) -> void:
 				add_child(cell)
 			4:
 				var cell = GridCell.new(Vector3(x, 0, y), gridtype)
-				cell.generate_cell()
+				# cell.generate_cell()
 				if (x > 0):
 					cell.assign_neighbour(4, get_children()[i-1])
 				if (y > 0) && (x > 0):

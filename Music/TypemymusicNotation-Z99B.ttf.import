@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c6xtd4cxsmtt5"
-path="res://.godot/imported/TypemymusicNotation-Z99B.ttf-18d7a67e7a031d374bb6f446e9ed34e8.fontdata"
+path="res://.godot/imported/TypemymusicNotation-Z99B.ttf-b1969618ffdfaee5c95bc017bbf37050.fontdata"
 
 [deps]
 
-source_file="res://Visuals/Music/TypemymusicNotation-Z99B.ttf"
-dest_files=["res://.godot/imported/TypemymusicNotation-Z99B.ttf-18d7a67e7a031d374bb6f446e9ed34e8.fontdata"]
+source_file="res://Music/TypemymusicNotation-Z99B.ttf"
+dest_files=["res://.godot/imported/TypemymusicNotation-Z99B.ttf-b1969618ffdfaee5c95bc017bbf37050.fontdata"]
 
 [params]
 

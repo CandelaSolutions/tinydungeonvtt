@@ -1,20 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://crl3xk2gb8r5m"]
+[gd_scene load_steps=9 format=3 uid="uid://crl3xk2gb8r5m"]
 
-[ext_resource type="Shader" uid="uid://cm2mc80omyd37" path="res://Visuals/Shaders/Sky.gdshader" id="1_okd8m"]
 [ext_resource type="Script" uid="uid://b666u25k50vaj" path="res://Scripts/Player/BoomCamera.gd" id="2_jw1i2"]
+[ext_resource type="Shader" uid="uid://cm2mc80omyd37" path="res://Materials/Shaders/Sky.gdshader" id="2_ua3d7"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nagsr"]
-shader = ExtResource("1_okd8m")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jw1i2"]
+shader = ExtResource("2_ua3d7")
 shader_parameter/skyColour = Color(0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_n0hqy"]
-sky_material = SubResource("ShaderMaterial_nagsr")
+[sub_resource type="Sky" id="Sky_jllt1"]
+sky_material = SubResource("ShaderMaterial_jw1i2")
 
-[sub_resource type="Environment" id="Environment_bqjj8"]
+[sub_resource type="Environment" id="Environment_5dh7s"]
 background_mode = 2
-sky = SubResource("Sky_n0hqy")
+sky = SubResource("Sky_jllt1")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jllt1"]
+shader = ExtResource("2_ua3d7")
+shader_parameter/skyColour = Color(0, 0, 0, 1)
+
+[sub_resource type="Sky" id="Sky_5dh7s"]
+sky_material = SubResource("ShaderMaterial_jllt1")
+
+[sub_resource type="Environment" id="Environment_jllt1"]
+background_mode = 2
+sky = SubResource("Sky_5dh7s")
 ambient_light_source = 3
-reflected_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
 
 [node name="MainMenuBackground" type="Node3D"]
 
@@ -23,12 +34,12 @@ transform = Transform3D(1, 0, 0, 0, 0.745441, 0.666571, 0, -0.666571, 0.745441, 
 light_energy = 2.005
 sky_mode = 1
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_bqjj8")
-
 [node name="BoomCamera" type="Camera3D" parent="."]
-transform = Transform3D(0.903009, 0.200695, -0.379586, 0, 0.883927, 0.467376, 0.429375, -0.422078, 0.7983, -3.79623, 4.67421, 7.98376)
+transform = Transform3D(0.9998941, 0, 0, 0, 0.99987763, 0, 0, 0, 0.9999044, 0, 0, 0)
+environment = SubResource("Environment_5dh7s")
 script = ExtResource("2_jw1i2")
-horizontalRotation = -22.435
-verticalRotation = -12.08
+centredLocation = Vector3(5, 0, 5)
 metadata/_custom_type_script = "uid://b666u25k50vaj"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jllt1")

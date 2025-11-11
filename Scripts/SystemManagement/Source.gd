@@ -3,6 +3,7 @@ class_name Source
 
 @export var name: String
 @export_file("*.md") var text: String
+@export var cover: Texture
 
 @export_category("System Information")
 @export var system: System
